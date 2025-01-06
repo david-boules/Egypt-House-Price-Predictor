@@ -12,7 +12,11 @@ import numpy as np
 import streamlit as st
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
+import os
 import pickle
+
+current_dir = os.path.dirname(__file__)
+model_path = os.path.join(current_dir, 'best_model.pkl')
 
 with open('best_model.pkl', 'rb') as file:
   model = pickle.load(file)
